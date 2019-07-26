@@ -1,0 +1,248 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    color: #666;
+    background: #f2f2f2;
+    font-size: 1em; /* 1em = 12pt = 16px = 100% */
+    line-height: 1.5em;
+    padding-top: 1em;
+}
+
+h1 {
+    font-size: 140%;
+    text-align: center;
+    font-weight: 200;
+}
+
+p {
+    margin: 0 0 1.5em 0;
+}
+
+a{
+    font-size: 120%;
+    font-weight: bold;
+}
+/************
+//-------------------------------
+// CABECERA
+//-------------------------------
+************/
+#main-header {          /* # selecciona los elementos ID con nombre main-header */
+    background: #20aeff;
+    color: white;
+    height: 80px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+/*
+ * Logo
+ */
+#logo {
+    /* padding: 1em 0 1em 1em; */
+    padding: 1% 1%;
+    /* width: 3em; */
+    width: 50px;
+}
+
+/*
+ * Navegación
+ */
+nav {
+    float: right;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #20aeff;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/* When the screen is less than 900 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:900px) {
+    ul.topnav li:not(:first-child) {display: none;}
+    /*ul.topnav li:not(:empty) {display: none;}*/
+    ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:900px) {
+    ul.topnav.responsive {position: relative;}
+    ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    ul.topnav.responsive li {
+        float: none;
+        display: inline;
+    }
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+}
+
+#main-content {
+    margin: 30px auto;
+    /*box-shadow: 0 0 10px rgba(0,0,0,.1);*/
+    text-align: center;
+    padding: 20px;
+}
+
+#main-footer
+{
+    background: #20aeff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    height: 20px;
+    font-size: x-small;
+}
+
+#main-footer a {
+    color: white;
+    /*padding-top: 10%;*/
+}
+
+/* Estados */
+
+input[type=button]{
+    background-color: #20aeff;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=number]{
+    text-align: center;
+    width: 30px;
+}
+
+/* Slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #20aeff;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.rango{
+    width: 50% !important;
+}
+
+/* Elimino el subrayado y doy estilo al link */
+.tag {
+    color: grey;
+    /* position: absolute;
+    left: 20%;
+    top: 5%; */
+}
+
+a.tag:link{
+    color: grey;
+    text-decoration: none;
+}
+
+/* tabla
+table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  } */
+
+.Status {
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #44e535;
+    border: 1px #78797c solid;
+}

@@ -1,0 +1,6 @@
+Para comprimir la web y subirla a SPIFFS:
+1 - Ir a https://htmlcompressor.com/compressor/ pegar el código, elegir el tipo y darle compress. 
+Pegar el codigo comprimido en un archivo nuevo 
+2 - Comprimir con 7Zip en formato gzip (NO el .html ni imagenes, .ico)
+3 - Copiar a la carpeta data los archivos a subirla
+4 - Desde Platformio ir al menu Run Task.. -> Upload file system image
